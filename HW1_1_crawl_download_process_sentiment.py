@@ -9,12 +9,14 @@ class Polly(Crawler):
         html = download(link.url)
         blob = TextBlob(plaintext(html))
         for sentence in blob.sentences:
-            print(sentence.sentiment.polarity)
+            print(sentence.sentiment
+            #.polarity
+             )
 
     def fail(self, link):
         print 'failed:', repr(link.url)
 
-p = Polly(links=['http://www.cnbc.com/'], delay=1)
+p = Polly(links=['https://twitter.com/search?q=%23SuperBowl&src=tyah'], delay=1)
 while not p.done:
     p.crawl(method=2, cached=False, throttle=1)
 
