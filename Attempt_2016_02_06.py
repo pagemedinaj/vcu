@@ -16,7 +16,22 @@ for j in range(4):
         print
     blob = TextBlob(plaintext(tweet.text))
     for sentence in blob.sentences:
-            print(sentence.sentiment.polarity)
-            print blob.noun_phrases
+        print(sentence.sentiment.polarity)
+        print blob.noun_phrases
+        print blob.detect_language()
+        print
 
 
+
+
+#def fail(self, link):
+ #       print 'failed:', repr(link.url)
+
+#print blob.noun_phrases
+
+#doc = {
+#    'author': 'Timo Selvaraj',
+#    'text': 'VCU is the best',
+#    'tags': 'hello, world',
+#    'timestamp: datetime.now'()
+#    }
